@@ -1,0 +1,60 @@
+/******************************************/
+/************ header component ************/
+/******************************************/
+
+header {
+  background-color: #ffffff;
+  padding: 40px 15px 10px 40px;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  top: 0;
+
+  .logo {
+    float: left;
+    width: 125px;
+    position: relative;
+    left: -25px;
+
+    // pseudo black line
+    &:before {
+      right: calc(100% - 1px);
+      background-color: #000;
+      position: absolute;
+      height: 4px;
+      content: '';
+      width: 100%;
+    }
+
+    // smooth fall-in effect upon page load
+    top: -40px;
+    opacity: 0;
+    -webkit-animation: onpageload-fall 2s forwards; /* Safari 4.0 - 8.0 */
+    animation: onpageload-fall 2s forwards;
+  }
+
+  .menu-button {
+    font-size: $text-large;
+    position: relative;
+    text-align: right;
+    float: right;
+    width: 50px;
+
+    // smooth fall-in effect upon page load
+    top: -40px;
+    opacity: 0;
+    -webkit-animation: onpageload-fall 1.5s forwards; /* Safari 4.0 - 8.0 */
+    animation: onpageload-fall 1.5s forwards;
+  }
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes onpageload-fall {
+  from {top: -40px; opacity: 0;}
+  to {top: 0; opacity: 1;}
+}
+
+@keyframes onpageload-fall {
+  from {top: -40px; opacity: 0;}
+  to {top: 0; opacity: 1;}
+}

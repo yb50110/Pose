@@ -1,0 +1,30 @@
+/******************************************/
+/************* home component *************/
+/******************************************/
+
+// to push the home contents due to fixed header
+.home-container {
+  margin-top: 90px;
+
+  .main-image {
+    //background-image: url('../img/content/mobile-1.jpeg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+
+  }
+}
+
+
+//// pseudo block behind element
+//&:before {
+//  background-color: $yellow;
+//  position: absolute;
+//  height: 100px;
+//  width: 80px;
+//  z-index: -1;
+//  content: '';
+//  right: 0;
+//  top: 0;
+//}
