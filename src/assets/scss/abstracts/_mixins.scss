@@ -32,3 +32,10 @@
   }
 }
 
+
+@mixin input-style() {
+  background-color: $light-grey;
+  padding: 10px;
+  border: none;
+}
+

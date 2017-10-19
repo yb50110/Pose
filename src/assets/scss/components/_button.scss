@@ -1,3 +1,58 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+
+.arrow {
+  transform: rotate(45deg);
+  background: #ffffff;
+  position: absolute;
+  height: 5px;
+  width: 40px;
+  right: 12px;
+  top: 30px;
+
+  &:before {
+    background: #ffffff;
+    content: "";
+    height: 20px;
+    position: absolute;
+    width: 5px;
+    bottom: -2px;
+    right: 3px;
+    transform: rotate(-45deg);
+  }
+  &:after {
+    background: #ffffff;
+    content: "";
+    height: 20px;
+    position: absolute;
+    width: 5px;
+    bottom: -13px;
+    right: 3px;
+    transform: rotate(45deg);
+  }
+}
+
+.down-arrow {
+  transform: rotate(-45deg);
+  display: inline-block;
+  background: #000000;
+  position: absolute;
+  bottom: 15px;
+  height: 2px;
+  width: 10px;
+  right: 12px;
+  left: 18px;
+
+  &:before {
+    transform: rotate(-90deg);
+    display: inline-block;
+    background: #000000;
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 10px;
+    right: 4px;
+    top: -4px;
+  }
+}

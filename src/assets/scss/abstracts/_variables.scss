@@ -10,7 +10,14 @@ $text-font-stack: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 /// Font sizes
 /// @type Size em
 $text-large: 2em;
+$text-medium: 1.75em;
+$text-small: 0.8em;
 
+
+/// Font weight
+/// @type Weight int
+$bold: 500;
+$regular: 400;
 
 
 /// Copy text color
@@ -20,6 +27,8 @@ $text-color: rgb(34, 34, 34) !default;
 /// Main brand color
 /// @type Color
 $yellow: #ffca12; // rgb(255, 202, 18)
+$teal: #6accbf; // rgb(106, 204, 191
+$red: #ed2d2c; // rgb(237, 45, 44)
 
 /// Light grey
 /// @type Color

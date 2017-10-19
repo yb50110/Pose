@@ -6,9 +6,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  isOpen: false;
+
   constructor() { }
 
   ngOnInit() {
+  //   this.isOpen: false;
   }
+  //
+  // private toggleOpen() {
+  //   this.isOpen: true;
+  // }
 
 }

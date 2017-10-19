@@ -3,49 +3,77 @@
 /******************************************/
 
 header {
-  background-color: #ffffff;
-  padding: 40px 15px 10px 40px;
-  position: fixed;
-  z-index: 999;
-  width: 100%;
-  top: 0;
+  font-weight: $bold;
 
-  .logo {
-    float: left;
-    width: 125px;
-    position: relative;
-    left: -25px;
+  .header-content {
+    padding: 40px 15px 10px 40px;
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    top: 0;
 
-    // pseudo black line
-    &:before {
-      right: calc(100% - 1px);
-      background-color: #000;
-      position: absolute;
-      height: 4px;
-      content: '';
-      width: 100%;
+    .logo {
+      float: left;
+      width: 110px;
+      position: relative;
+      left: -22px;
+
+      // pseudo black line
+      &:before {
+        right: calc(100% - 1px);
+        background-color: #000;
+        position: absolute;
+        height: 4px;
+        content: '';
+        width: 100%;
+      }
+
+      // smooth fall-in effect upon page load
+      top: -40px;
+      opacity: 0;
+      -webkit-animation: onpageload-fall 2.5s forwards; /* Safari 4.0 - 8.0 */
+      animation: onpageload-fall 2.5s forwards;
     }
 
-    // smooth fall-in effect upon page load
-    top: -40px;
-    opacity: 0;
-    -webkit-animation: onpageload-fall 2s forwards; /* Safari 4.0 - 8.0 */
-    animation: onpageload-fall 2s forwards;
+    .menu-button {
+      font-size: $text-large;
+      position: relative;
+      text-align: right;
+      float: right;
+      z-index: 999;
+      width: 50px;
+
+      // smooth fall-in effect upon page load
+      top: -40px;
+      opacity: 0;
+      -webkit-animation: onpageload-fall 1.5s forwards; /* Safari 4.0 - 8.0 */
+      animation: onpageload-fall 1.5s forwards;
+    }
   }
 
-  .menu-button {
-    font-size: $text-large;
-    position: relative;
-    text-align: right;
-    float: right;
-    width: 50px;
-
-    // smooth fall-in effect upon page load
-    top: -40px;
-    opacity: 0;
-    -webkit-animation: onpageload-fall 1.5s forwards; /* Safari 4.0 - 8.0 */
-    animation: onpageload-fall 1.5s forwards;
+  .header-background {
+    background-color: #ffffff;
+    padding: 40px 15px 10px 40px;
+    position: absolute;
+    z-index: 997;
+    width: 100%;
+    top: 40px;
   }
+
+  .menu {
+    //bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    bottom: -100%;
+    z-index: 999;
+    right: 0;
+    left: 0;
+    top: 0;
+  }
+}
+
+.fixed {
+  //position: fixed;
 }
 
 /* Safari 4.0 - 8.0 */

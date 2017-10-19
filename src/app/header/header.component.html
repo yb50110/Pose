@@ -1,8 +1,45 @@
 <header>
-    <div class="logo">
-        <!--<img src="../../assets/img/logos/logo-mobile.svg" srcset="../../assets/img/logos/logo-desktop.svg 3000w" alt="Pose conference logo">-->
-        <img src="../../assets/img/logos/logo-mobile.svg" alt="Pose conference logo">
+    <div class="header-content">
+        <div class="logo">
+            <picture>
+                <!-- IE supported by picturefill -->
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                <source srcset="../../assets/img/logos/logo-desktop.svg" media="(min-width: 1200px)">
+                <!--[if IE 9]></video><![endif]-->
+                <img src="../../assets/img/logos/logo-mobile.svg" alt="Pose conference logo">
+            </picture>
+        </div>
+
+        <p class="menu-button" [ngClass]="{'active': isOpen}" (click)="toggleOpen()">18</p>
     </div>
 
-    <p class="menu-button">18</p>
+    <div class="header-background">
+
+    </div>
+
+    <!--<div class="menu">-->
+
+    <!--</div>-->
 </header>
+
+
+<!--<script>-->
+    <!--$(document).ready(function() {-->
+        <!--console.log('wut');-->
+        <!--$(window).scroll(function () {-->
+            <!--console.log('wut');-->
+            <!--//if you hard code, then use console-->
+            <!--//.log to determine when you want the-->
+            <!--//nav bar to stick.-->
+            <!--console.log($(window).scrollTop());-->
+            <!--if ($(window).scrollTop() > 10) {-->
+                <!--$('.header-content').addClass('fixed');-->
+                <!--$('.header-background').addClass('fixed');-->
+            <!--}-->
+            <!--if ($(window).scrollTop() < 10) {-->
+                <!--$('.header-content').removeClass('fixed');-->
+                <!--$('.header-background').removeClass('fixed');-->
+            <!--}-->
+        <!--});-->
+    <!--});-->
+<!--</script>-->

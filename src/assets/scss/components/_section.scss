@@ -1,0 +1,38 @@
+
+.section {
+  margin: 50px 0 0 0;
+
+  p {
+    margin: 10px 0;
+    line-height: 1.25em;
+  }
+
+  .section-header {
+    font-size: $text-medium;
+    margin-bottom: 20px;
+    font-weight: $bold;
+    text-align: right;
+    position: relative;
+
+    &:before {
+      background-color: #000000;
+      width: calc(100% + 10px);
+      position: absolute;
+      margin-left: -10px;
+      content: "";
+      height: 3px;
+    }
+  }
+}
+
+.newsletter-container {
+  .newsletter-input {
+    @include input-style;
+    width: 100%;
+  }
+}
+.sponsors-container {
+  .sponsor-image-container {
+
+  }
+}
