@@ -18,6 +18,7 @@
 
   .color-blocks {
     .top-left {
+      transition: 1s;  // for smooth transitions
       background-color: $teal;
       position: absolute;
       height: 35px;
@@ -33,6 +34,7 @@
     }
 
     .top-right {
+      transition: 1s;  // for smooth transitions
       background-color: $yellow;
       position: absolute;
       height: 120px;
@@ -43,6 +45,7 @@
     }
 
     .bottom-left {
+      transition: 1s;  // for smooth transitions
       background-color: $teal;
       position: absolute;
       height: 10px;
@@ -52,8 +55,7 @@
     }
 
     .bottom-right {
-      // arrow css is in the bottom
-
+      transition: 1s;  // for smooth transitions
       background-color: $red;
       position: absolute;
       text-align: center;
@@ -73,13 +75,20 @@
   }
 
   .side-information {
+    -ms-transform: rotate(-90deg); /* IE 9 */
+    -ms-transform-origin: 0 0; /* IE 9 */
+    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+    -webkit-transform-origin: 0 0; /* Chrome, Safari, Opera */
     transform: rotate(-90deg);
+    transform-origin: 0 0;
+
     font-size: $text-small;
     position: absolute;
     text-align: center;
+    font-weight: $bold;
     width: 100vh;
-    right: 20px;
-    top: 50%;
+    margin-left: -25px;
+    margin-top: -50px;
 
     // smooth fall-in effect upon page load
     opacity: 0;

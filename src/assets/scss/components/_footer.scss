@@ -1,0 +1,35 @@
+.footer {
+  padding: 40px 15px 10px 40px;
+
+  .footer-information {
+    width: calc(100% - 45px);
+    display: inline-block;
+
+    source, img {
+      width: 170px;
+    }
+
+    p {
+      text-size: $text-small;
+      line-height: 1.4em;
+      margin: 10px 0;
+      opacity: 0.3;
+    }
+  }
+
+  .footer-connect {
+    display: inline-block;
+    opacity: 0.3;
+    width: 40px;
+
+    source, img {
+      width: 100%;
+    }
+  }
+
+  .copyright {
+    margin: 20px 0 10px 0;
+    font-size: 0.7em;
+    opacity: 0.4;
+  }
+}

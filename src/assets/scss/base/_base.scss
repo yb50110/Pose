@@ -55,6 +55,7 @@ a {
 /**************************************************************************/
 
 .my-container {
+  transition: 1s;  // for smooth transitions
   padding-right: 15px !important;
   padding-left: 40px !important;
   overflow-x: hidden;
