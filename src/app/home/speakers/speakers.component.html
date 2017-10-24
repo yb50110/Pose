@@ -1,18 +1,18 @@
-<div class="slider-wrap">
-  <div class="slider" id="slider">
-    <div class="holder">
-      <!--<div class="slide-wrapper">-->
-        <!--<div class="slide"><img class="slide-image" src="//farm8.staticflickr.com/7347/8731666710_34d07e709e_z.jpg" /></div>-->
-        <!--74-->
-      <!--</div>-->
-      <!--<div class="slide-wrapper">-->
-        <!--<div class="slide"><img class="slide-image" src="//farm8.staticflickr.com/7384/8730654121_05bca33388_z.jpg" /></div>-->
-        <!--64-->
-      <!--</div>-->
-      <!--<div class="slide-wrapper">-->
-        <!--<div class="slide"><img class="slide-image" src="//farm8.staticflickr.com/7382/8732044638_9337082fc6_z.jpg" /></div>-->
-        <!--82-->
-      <!--</div>-->
+<div class="speaker-carousel">
+    <ul class="speaker-pagination">
+        <!-- +1 is done for the index 'i' so that it shows from 1, 2, ... in the front-end -->
+        <li *ngFor="let speaker of speakers; let i = index" [attr.data-index]="i">{{ speaker.viewing ? i+1 : '.' }}</li>
+    </ul>
+
+    <div class="speaker" *ngFor="let speaker of speakers">
+        <div class="section-header speaker-name">{{ speaker.fName }}<br>{{ speaker.lName }}</div>
+        <picture class="speaker-image">
+            <!-- IE supported by picturefill -->
+            <!--[if IE 9]>
+            <video style="display: none;"><![endif]-->
+            <source srcset="../../assets/img/content/speakers/{{ speaker.imageUrl }}" media="(min-width: 1200px)">
+            <!--[if IE 9]></video><![endif]-->
+            <img src="../../assets/img/content/speakers/{{ speaker.imageUrl }}" alt="Pose conference logo">
+        </picture>
     </div>
-  </div>
 </div>

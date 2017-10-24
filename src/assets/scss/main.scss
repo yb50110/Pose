@@ -25,6 +25,10 @@
   'components/header',
   'components/footer',
   'components/home';
+@import
+  'components/home-components/schedule',
+  'components/home-components/speakers',
+  'components/home-components/lodging';
 
 
 @import '../responsive';
