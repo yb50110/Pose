@@ -7,13 +7,18 @@ import * as $ from 'jquery';
 })
 
 export class HeaderComponent implements OnInit {
-
     constructor() {}
 
     isOpen: boolean;
+    isSticky: boolean;
+    headerOffset: number;
 
     ngOnInit() {
         this.isOpen = false;
+        this.isSticky = false;
+        // get offset for header... used in stickyHeader()
+        // offset is set here so that the value does not change even after pushing it to the top of the screen
+        this.headerOffset = document.getElementById('pose-header-background').offsetTop;
     }
 
     openMenu() {
@@ -34,7 +39,14 @@ export class HeaderComponent implements OnInit {
         this.isOpen = false;
     }
 
-    // fixed header
+    stickyHeader() {
+        if (window.pageYOffset >= this.headerOffset) {
+            this.isSticky = true;
+        } else {
+            this.isSticky = false;
+        }
+    }
+
     // spin of 18
     // moving of pose line
 }

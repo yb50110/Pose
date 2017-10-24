@@ -12,27 +12,46 @@ header {
     width: 100%;
     top: 0;
 
+    &.sticky {
+      padding-top: 10px;
+      position: fixed;
+
+      .menu-button {
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+
     .logo {
       float: left;
       width: 110px;
       position: relative;
       left: -22px;
 
-      // pseudo black line
-      &:before {
-        right: calc(100% - 1px);
-        background-color: #000;
-        position: absolute;
-        height: 4px;
-        content: '';
-        width: 100%;
-      }
-
       // smooth fall-in effect upon page load
       top: -40px;
       opacity: 0;
       -webkit-animation: onpageload-fall 2.5s forwards; /* Safari 4.0 - 8.0 */
       animation: onpageload-fall 2.5s forwards;
+
+      .logo-line {
+        width: calc(100% + 40px);
+        background-color: #000;
+        position: absolute;
+        left: -40px;
+        height: 4px;
+
+        // pseudo: white space between the line
+        &:after {
+          background: #ffffff;
+          position: absolute;
+          height: 100%;
+          content: "";
+          right: 17px;
+          width: 5px;
+        }
+      }
     }
 
     .menu-button {
@@ -48,16 +67,33 @@ header {
       opacity: 0;
       -webkit-animation: onpageload-fall 1.5s forwards; /* Safari 4.0 - 8.0 */
       animation: onpageload-fall 1.5s forwards;
+
+      &:after {
+        position: absolute;
+        background: $teal;
+        transition: 1s;
+        bottom: -9px;
+        right: -15px;
+        content: "";
+        height: 4px;
+        width: 100%;
+        opacity: 0;  // show when parent gains 'sticky' class
+      }
     }
   }
 
   .header-background {
     background-color: #ffffff;
-    padding: 40px 15px 10px 40px;
+    padding: 55px 15px 0 40px;
     position: absolute;
     z-index: 997;
     width: 100%;
-    top: 40px;
+    top: 35px;
+
+    &.sticky {
+      position: fixed;
+      top: 0;
+    }
   }
 
   .menu {
