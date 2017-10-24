@@ -61,14 +61,58 @@ header {
   }
 
   .menu {
-    //bottom: 0;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.95);
+    padding: 50px 15px 0 40px;
+    transition: 0.5s;
     position: fixed;
-    bottom: -100%;
-    z-index: 999;
+    z-index: 9999;
+    left: 100%;
+    bottom: 0;
     right: 0;
-    left: 0;
     top: 0;
+
+    &.active {
+      left: 0;
+    }
+
+    .menu-close {
+      transform: rotate(45deg);
+      background: #ffffff;
+      position: absolute;
+      height: 25px;
+      float: right;
+      right: 30px;
+      width: 3px;
+
+      &:after {
+        transform: rotate(90deg);
+        background: #ffffff;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        content: "";
+      }
+    }
+
+    .menu-links {
+      font-size: $text-medium;
+      margin-top: 25px;
+
+      a {
+        white-space: nowrap;
+        padding: 15px 0;
+        display: block;
+        color: #ffffff;
+
+        &.bottom {
+          // position to the bottom of the screen if tall enough
+          @media screen and (min-height: 500px) {
+            position: absolute;
+            bottom: 30px;
+          }
+        }
+      }
+    }
   }
 }
 

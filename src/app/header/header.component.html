@@ -9,17 +9,20 @@
                 <img src="../../assets/img/logos/logo-mobile.svg" alt="Pose conference logo">
             </picture>
         </div>
-
-        <p class="menu-button" [ngClass]="{'active': isOpen}" (click)="toggleOpen()">18</p>
+        <p class="menu-button" (click)="openMenu()">18</p>
     </div>
+    <div class="header-background"></div>
 
-    <div class="header-background">
-
+    <div class="menu" id="pose-menu" [ngClass]="{'active': isOpen}">
+        <div class="menu-close" (click)="closeMenu()"></div>
+        <div class="menu-links">
+            <a (click)="scrollTo('what')">What, When, Where</a>
+            <a (click)="scrollTo('who')">Speakers</a>
+            <a (click)="scrollTo('schedule')">Schedule</a>
+            <a (click)="scrollTo('lodging')">Lodging</a>
+            <a (click)="scrollTo('contact')" class="bottom">Contact</a>
+        </div>
     </div>
-
-    <!--<div class="menu">-->
-
-    <!--</div>-->
 </header>
 
 
