@@ -13,13 +13,19 @@ header {
     top: 0;
 
     &.sticky {
-      padding-top: 10px;
+      padding-top: 7px;
       position: fixed;
 
-      .menu-button {
-        &:after {
-          opacity: 1;
+      .logo {
+        .logo-line {
+          background-color: #ffffff;
+          height: 5px;
         }
+      }
+
+      .menu-button {
+        transform: rotate(-90deg);
+        transform-origin: 70% 50%;
       }
     }
 
@@ -39,6 +45,7 @@ header {
         width: calc(100% + 40px);
         background-color: #000;
         position: absolute;
+        transition: 0.25s;
         left: -40px;
         height: 4px;
 
@@ -58,6 +65,7 @@ header {
       font-size: $text-large;
       position: relative;
       text-align: right;
+      transition: 0.5s;
       float: right;
       z-index: 999;
       width: 50px;
@@ -67,18 +75,6 @@ header {
       opacity: 0;
       -webkit-animation: onpageload-fall 1.5s forwards; /* Safari 4.0 - 8.0 */
       animation: onpageload-fall 1.5s forwards;
-
-      &:after {
-        position: absolute;
-        background: $teal;
-        transition: 1s;
-        bottom: -9px;
-        right: -15px;
-        content: "";
-        height: 4px;
-        width: 100%;
-        opacity: 0;  // show when parent gains 'sticky' class
-      }
     }
   }
 
@@ -90,15 +86,41 @@ header {
     width: 100%;
     top: 35px;
 
+    .header-borders {
+      position: absolute;
+      background: $teal;
+      transition: 0.5s;
+      height: 4px;
+      width: 100%;
+      bottom: 0;
+      right: 0;
+      opacity: 0; // show when parent gains 'sticky' class
+
+      &:after {
+        width: calc(100% - 168px);
+        background: #ffffff;
+        position: absolute;
+        content: "";
+        right: 40px;
+        height: 5px;
+        bottom: 0;
+      }
+    }
+
     &.sticky {
       position: fixed;
       top: 0;
+
+      .header-borders {
+        opacity: 1;
+      }
     }
   }
 
   .menu {
     background: rgba(0, 0, 0, 0.95);
-    padding: 50px 15px 0 40px;
+    padding: 20px 15px 0 40px;
+    transform-origin: 70% 50%;
     transition: 0.5s;
     position: fixed;
     z-index: 9999;
@@ -152,17 +174,25 @@ header {
   }
 }
 
-.fixed {
-  //position: fixed;
-}
-
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes onpageload-fall {
-  from {top: -40px; opacity: 0;}
-  to {top: 0; opacity: 1;}
+  from {
+    top: -40px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 @keyframes onpageload-fall {
-  from {top: -40px; opacity: 0;}
-  to {top: 0; opacity: 1;}
+  from {
+    top: -40px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
