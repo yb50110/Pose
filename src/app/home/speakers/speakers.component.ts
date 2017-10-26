@@ -1,55 +1,46 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, AfterViewChecked} from '@angular/core';
+import {DomSanitizer} from '@angular/platform-browser';
+import { Speakers } from './speakers';
 
 @Component({
     selector: 'app-speakers',
     templateUrl: './speakers.component.html',
 
 })
-export class SpeakersComponent implements OnInit {
-    speakers = [
-        {
-            fName: 'Airi',
-            lName: 'Nakamura',
-            imageUrl: 'airi-nakamura-3.png',
-            viewing: true
-        },
-        {
-            fName: 'Allycia',
-            lName: 'London',
-            imageUrl: 'allycia-london-3.png',
-            viewing: false
-        },
-        {
-            fName: 'Chico',
-            lName: 'Shakil',
-            imageUrl: 'chico-shakil-3.png',
-            viewing: false
-        },
-        {
-            fName: 'Colene',
-            lName: 'Berny',
-            imageUrl: 'colene-berny-3.png',
-            viewing: false
-        },
-        {
-            fName: 'Daniel',
-            lName: 'Jeptha',
-            imageUrl: 'daniel-jeptha-3.png',
-            viewing: false
-        },
-        {
-            fName: 'Warren',
-            lName: 'Kumar',
-            imageUrl: 'warren-kumar-3.png',
-            viewing: false
-        }
-    ];
+export class SpeakersComponent implements OnInit, AfterViewChecked {
+    speakers = Speakers;
+    readMore: boolean;
 
-    constructor() {
+    constructor(private sanitizer: DomSanitizer) {
     }
 
     ngOnInit() {
+        this.readMore = false;
     }
 
-    // when scroll, move image and then set that to be visible=true and the prev as visible=false
+    ngAfterViewChecked() {
+        (<any>$('.owl-carousel')).owlCarousel({
+            loop: true,
+            margin: 10,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 1
+                },
+                1200: {
+                    items: 3
+                }
+            }
+        });
+    }
+
+    openReadMore() {
+        this.readMore = true;
+    }
+    closeReadMore() {
+        this.readMore = false;
+    }
 }
+

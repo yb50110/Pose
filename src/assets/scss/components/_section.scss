@@ -1,6 +1,7 @@
 
 .section {
   padding: 50px 0 0 0;
+  position: relative;
 
   p {
     margin: 10px 0;
@@ -48,5 +49,43 @@
       width: calc(50% - 20px);
       margin: 10px;
     }
+  }
+}
+
+// reused buttons
+.read-more {
+  position: absolute;
+  background: $red;
+  cursor: pointer;
+  height: 35px;
+  left: -40px;
+  z-index: 10;
+  width: 80px;
+  bottom: 0;
+
+  .arrow {
+    transform: rotate(135deg) scale(0.5);
+    right: 11px;
+    top: 15px;
+  }
+}
+
+.close {
+  transform: rotate(45deg) scale(0.9);
+  background: #ffffff;
+  position: absolute;
+  height: 25px;
+  float: right;
+  right: 30px;
+  width: 3px;
+  top: 5px;
+
+  &:after {
+    transform: rotate(90deg);
+    background: #ffffff;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: "";
   }
 }
