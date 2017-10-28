@@ -5,3 +5,15 @@ body {
   font-family: $text-font-stack;
   font-weight: $regular;
 }
+
+.name-teal {
+  color: $teal;
+  padding: 5px 0;
+  display: inline-block;
+}
+
+.name-yellow {
+  font-size: $text-medium;
+  font-weight: $bold;
+  color: $yellow;
+}

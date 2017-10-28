@@ -168,6 +168,7 @@
         margin-left: 10%;
 
         .speaker {
+          overflow: initial;
           width: 100%;
 
           // pseudo: white box
@@ -228,6 +229,8 @@
   .read-more {
     left: -20px;
     width: 60px;
+
+
   }
 
   // footer

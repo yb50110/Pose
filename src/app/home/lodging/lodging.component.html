@@ -1,3 +1,43 @@
-<p>
-  lodging works!
-</p>
+<div class="read-more-red-box"></div>
+
+<div class="lodging-carousel">
+    <div class="owl-carousel lodging">
+        <div class="speaker" *ngFor="let lodge of lodging">
+            <div class="speaker-buttons">
+                <div class="read-more withText read-more-open" *ngIf="lodge.readMore===false" (click)="openReadMore(lodge)">
+                    <div class="arrow"></div>
+                    <p>{{ lodge.name }}</p>
+                </div>
+                <div class="read-more withText read-more-close" *ngIf="lodge.readMore===true" (click)="closeReadMore(lodge)">
+                    <div class="close"></div>
+                    <p>{{ lodge.name }}</p>
+                </div>
+            </div>
+            <div class="speaker-front" [ngClass]="{ 'hide' : lodge.readMore }">
+                <picture class="speaker-image">
+                    <!-- IE supported by picturefill -->
+                    <!--[if IE 9]>
+                    <video style="display: none;"><![endif]-->
+                    <source srcset="../../assets/img/content/lodging/{{ lodge.imageUrl }}" media="(min-width: 1200px)">
+                    <!--[if IE 9]></video><![endif]-->
+                    <img src="../../assets/img/content/lodging/{{ lodge.imageUrl }}" alt="Pose conference logo">
+                </picture>
+            </div>
+
+            <div class="speaker-back" *ngIf="lodge.readMore===true">
+                <p>
+                    <span class="name-yellow">{{ lodge.name }}</span> <br>
+                    <span class="name-teal">Single room:</span> {{ lodge.singleRate }}/per night <br>
+                    <span class="name-teal">Double room:</span> {{ lodge.doubleRate }}/per night <br>
+                    <span class="name-teal">Distance from convention:</span> {{ lodge.distance }} <br>
+                    {{ lodge.description }}
+                </p>
+                <a href="{{ lodge.siteUr }}" class="button" target="_blank">Book a room</a>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>

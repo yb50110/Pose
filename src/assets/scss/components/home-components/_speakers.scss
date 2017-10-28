@@ -1,6 +1,7 @@
 .speaker {
   background-color: #000000;
   position: relative;
+  overflow-x: hidden;
   height: 300px;
 
   .speaker-front {
@@ -47,14 +48,6 @@
     height: 100%;
     width: 100%;
     z-index: 1;
-
-     p {
-       .name-yellow {
-         font-size: $text-medium;
-         font-weight: $bold;
-         color: $yellow;
-       }
-     }
   }
 }
 
@@ -90,4 +83,74 @@
   span {
     visibility: hidden;
   }
+}
+.autoplay {
+
+}
+
+
+.speaker-buttons {
+  .read-more {
+    position: absolute;
+    background: $red;
+    cursor: pointer;
+    height: 35px;
+    left: -40px;
+    z-index: 10;
+    width: 80px;
+    bottom: 0;
+
+    .arrow {
+      transform: rotate(135deg) scale(0.5);
+      right: 11px;
+      top: 15px;
+    }
+
+    .close {
+      transform: rotate(45deg) scale(0.9);
+      background: #ffffff;
+      position: absolute;
+      height: 25px;
+      float: right;
+      right: 30px;
+      width: 3px;
+      top: 5px;
+
+      &:after {
+        transform: rotate(90deg);
+        background: #ffffff;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        content: "";
+      }
+    }
+
+    &.withText {
+      padding: 10px 15px;
+      width: auto;
+
+      .arrow { left: 30px; }
+      .close { left: 48px; }
+
+      p {
+        margin: 0 0 0 55px;
+        color: #ffffff;
+      }
+    }
+
+    &.read-more-close {
+      position: fixed;
+    }
+  }
+}
+
+// reused buttons
+.read-more-red-box {
+  transform: translate(-100%);
+  position: absolute;
+  background: $red;
+  height: 35px;
+  width: 100%;
+  bottom: 0;
 }

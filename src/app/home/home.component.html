@@ -1,6 +1,20 @@
 <div class="home-container">
     <!-- home image carousel -->
-    <div class="main-image"></div>
+    <div class="main-image">
+        <div class="owl-carousel autoplay">
+            <div class="main-image-single" *ngFor="let image of homeImages">
+                <div [ngStyle]="{'background-image': 'url(../../assets/img/background/' + image.mobileUrl + ')'}"></div>
+            </div>
+            <!--<picture *ngFor="let image of homeImages">-->
+                <!--&lt;!&ndash; IE supported by picturefill &ndash;&gt;-->
+                <!--&lt;!&ndash;[if IE 9]>-->
+                <!--<video style="display: none;"><![endif]&ndash;&gt;-->
+                <!--<source srcset="../../assets/img/background/{{ image.desktopUrl }}" media="(min-width: 1200px)">-->
+                <!--&lt;!&ndash;[if IE 9]></video><![endif]&ndash;&gt;-->
+                <!--<img src="../../assets/img/background/{{ image.mobileUrl }}" alt="Pose conference logo">-->
+            <!--</picture>-->
+        </div>
+    </div>
 
     <div class="color-blocks">
         <div class="top-left"></div>
@@ -43,12 +57,12 @@
 
     <div class="section schedule-container" id="pose-section-schedule">
         <p class="section-header">Schedule</p>
-
+        <app-schedule></app-schedule>
     </div>
 
     <div class="section Lodging-container" id="pose-section-lodging">
         <p class="section-header">Lodging</p>
-
+        <app-lodging></app-lodging>
     </div>
 
     <div class="section newsletter-container">
@@ -62,28 +76,32 @@
         <div class="sponsor-image-container">
             <picture>
                 <!-- IE supported by picturefill -->
-                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                <!--[if IE 9]>
+                <video style="display: none;"><![endif]-->
                 <source srcset="../../assets/img/content/sponsors/affa.svg">
                 <!--[if IE 9]></video><![endif]-->
                 <img src="../../assets/img/content/sponsors/affa.svg" alt="Affa company logo">
             </picture>
             <picture>
                 <!-- IE supported by picturefill -->
-                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                <!--[if IE 9]>
+                <video style="display: none;"><![endif]-->
                 <source srcset="../../assets/img/content/sponsors/amiga.svg">
                 <!--[if IE 9]></video><![endif]-->
                 <img src="../../assets/img/content/sponsors/amiga.svg" alt="Affa company logo">
             </picture>
             <picture>
                 <!-- IE supported by picturefill -->
-                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                <!--[if IE 9]>
+                <video style="display: none;"><![endif]-->
                 <source srcset="../../assets/img/content/sponsors/blossin.svg">
                 <!--[if IE 9]></video><![endif]-->
                 <img src="../../assets/img/content/sponsors/blossin.svg" alt="Affa company logo">
             </picture>
             <picture>
                 <!-- IE supported by picturefill -->
-                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                <!--[if IE 9]>
+                <video style="display: none;"><![endif]-->
                 <source srcset="../../assets/img/content/sponsors/ennix.svg">
                 <!--[if IE 9]></video><![endif]-->
                 <img src="../../assets/img/content/sponsors/ennix.svg" alt="Affa company logo">

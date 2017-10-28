@@ -45,9 +45,13 @@
 }
 
 @mixin button-style() {
+  background-color: $yellow;
   font-weight: $boldest;
+  margin: 10px 0 20px 0;
+  display: inline-block;
+  border-radius: 0;
+  color: #000000;
   padding: 10px;
-  margin: 10px 0;
   border: none;
 
   &:hover {

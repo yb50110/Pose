@@ -1,12 +1,12 @@
 import {Component, OnInit, AfterViewChecked} from '@angular/core';
 import {DomSanitizer} from '@angular/platform-browser';
-import { Speakers } from './speakers';
+import {Speakers} from './speakers';
 
 @Component({
     selector: 'app-speakers',
     templateUrl: './speakers.component.html',
-
 })
+
 export class SpeakersComponent implements OnInit, AfterViewChecked {
     speakers = Speakers;
     readMore: boolean;
@@ -19,7 +19,7 @@ export class SpeakersComponent implements OnInit, AfterViewChecked {
     }
 
     ngAfterViewChecked() {
-        (<any>$('.owl-carousel')).owlCarousel({
+        (<any>$('.owl-carousel.speakers')).owlCarousel({
             loop: true,
             margin: 10,
             responsive: {
@@ -28,7 +28,7 @@ export class SpeakersComponent implements OnInit, AfterViewChecked {
                 },
                 1200: {
                     margin: 20,
-                    items: 2
+                    items: 3
                 }
             }
         });
@@ -40,6 +40,7 @@ export class SpeakersComponent implements OnInit, AfterViewChecked {
         }
         speaker.readMore = true;
     }
+
     closeReadMore(speaker) {
         speaker.readMore = false;
     }

@@ -31,10 +31,6 @@
     @include input-style;
     width: 100%;
   }
-  .newsletter-button {
-    @include button-style;
-    background-color: $yellow;
-  }
 }
 
 .sponsors-container {
@@ -49,52 +45,5 @@
       width: calc(50% - 20px);
       margin: 10px;
     }
-  }
-}
-
-// reused buttons
-.read-more-red-box {
-  transform: translate(-100%);
-  position: absolute;
-  background: $red;
-  height: 36px;
-  width: 100%;
-  bottom: 0;
-}
-
-.read-more {
-  position: absolute;
-  background: $red;
-  cursor: pointer;
-  height: 35px;
-  left: -40px;
-  z-index: 10;
-  width: 80px;
-  bottom: 0;
-
-  .arrow {
-    transform: rotate(135deg) scale(0.5);
-    right: 11px;
-    top: 15px;
-  }
-}
-
-.close {
-  transform: rotate(45deg) scale(0.9);
-  background: #ffffff;
-  position: absolute;
-  height: 25px;
-  float: right;
-  right: 30px;
-  width: 3px;
-  top: 5px;
-
-  &:after {
-    transform: rotate(90deg);
-    background: #ffffff;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    content: "";
   }
 }

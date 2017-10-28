@@ -1,7 +1,7 @@
 <div class="read-more-red-box"></div>
 
 <div class="speaker-carousel">
-    <div class="owl-carousel">
+    <div class="owl-carousel speakers">
         <div class="speaker" *ngFor="let speaker of speakers">
             <div class="speaker-buttons">
                 <div class="read-more"  *ngIf="speaker.readMore===false" (click)="openReadMore(speaker)"><div class="arrow"></div></div>
@@ -18,7 +18,7 @@
                     <img src="../../assets/img/content/speakers/{{ speaker.imageUrl }}" alt="Pose conference logo">
                 </picture>
             </div>
-            <div class="speaker-back">
+            <div class="speaker-back" *ngIf="speaker.readMore===true">
                 <p> <span class="name-yellow">{{ speaker.fName }} {{ speaker.lName }}</span> {{ speaker.bio }}</p>
             </div>
         </div>
