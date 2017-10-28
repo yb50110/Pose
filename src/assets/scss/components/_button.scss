@@ -2,6 +2,10 @@
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
 
+button {
+  border-radius: 0;
+}
+
 .arrow {
   transform: rotate(45deg);
   background: #ffffff;

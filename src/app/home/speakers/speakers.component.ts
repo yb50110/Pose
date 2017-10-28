@@ -26,21 +26,22 @@ export class SpeakersComponent implements OnInit, AfterViewChecked {
                 0: {
                     items: 1
                 },
-                768: {
-                    items: 1
-                },
                 1200: {
-                    items: 3
+                    margin: 20,
+                    items: 2
                 }
             }
         });
     }
 
-    openReadMore() {
-        this.readMore = true;
+    openReadMore(speaker) {
+        for (const eachSpeaker of this.speakers) {
+            eachSpeaker.readMore = false;  // reset so all speaker's readmore is closed
+        }
+        speaker.readMore = true;
     }
-    closeReadMore() {
-        this.readMore = false;
+    closeReadMore(speaker) {
+        speaker.readMore = false;
     }
 }
 

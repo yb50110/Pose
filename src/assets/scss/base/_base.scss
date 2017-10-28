@@ -57,3 +57,17 @@ a {
   padding-left: 40px !important;
   overflow-x: hidden;
 }
+
+.desktop-show {
+  display: none;
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+}
+
+.mobile-show {
+  display: block;
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
+}

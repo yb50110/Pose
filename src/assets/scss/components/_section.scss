@@ -53,6 +53,15 @@
 }
 
 // reused buttons
+.read-more-red-box {
+  transform: translate(-100%);
+  position: absolute;
+  background: $red;
+  height: 36px;
+  width: 100%;
+  bottom: 0;
+}
+
 .read-more {
   position: absolute;
   background: $red;

@@ -47,18 +47,6 @@
     .section {
       margin: 50px 0 0 30%;
 
-      &.speakers-container {
-        .speaker {
-          .speaker-image {
-            source, img {
-              margin-right: 10px;
-              margin-top: 5%;
-              height: 95%;
-            }
-          }
-        }
-      }
-
       &.sponsors-container {
         .sponsor-image-container {
           justify-content: space-around;
@@ -180,10 +168,17 @@
         margin-left: 10%;
 
         .speaker {
-          width: calc((100% / 3) - 10px);
-          margin: 0 15px 15px 0;
-          height: 200px;
-          float: left;
+          width: 100%;
+
+          // pseudo: white box
+          &:before {
+            position: absolute;
+            height: 100%;
+            content: "";
+            width: 21px;
+            left: -20px;
+            bottom: 0;
+          }
 
           &:nth-of-type(3n) {
             margin-right: 0;
@@ -198,7 +193,9 @@
           .speaker-image {
             picture {
               source, img {
-                margin-right: -10px;
+                transform: scale(0.8);
+                margin-right: -40px;
+                margin-top: -10%;
               }
             }
           }
@@ -226,6 +223,11 @@
         }
       }
     }
+  }
+
+  .read-more {
+    left: -20px;
+    width: 60px;
   }
 
   // footer

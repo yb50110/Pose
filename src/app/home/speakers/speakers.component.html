@@ -1,10 +1,13 @@
-<div class="read-more"  *ngIf="readMore===false" (click)="openReadMore()"><div class="arrow"></div></div>
-<div class="read-more" *ngIf="readMore===true" (click)="closeReadMore()"><div class="close"></div></div>
+<div class="read-more-red-box"></div>
 
 <div class="speaker-carousel">
     <div class="owl-carousel">
         <div class="speaker" *ngFor="let speaker of speakers">
-            <div class="speaker-front" [ngClass]="{ 'hide' : readMore }">
+            <div class="speaker-buttons">
+                <div class="read-more"  *ngIf="speaker.readMore===false" (click)="openReadMore(speaker)"><div class="arrow"></div></div>
+                <div class="read-more" *ngIf="speaker.readMore===true" (click)="closeReadMore(speaker)"><div class="close"></div></div>
+            </div>
+            <div class="speaker-front" [ngClass]="{ 'hide' : speaker.readMore }">
                 <div class="section-header speaker-name">{{ speaker.fName }}<br>{{ speaker.lName }}</div>
                 <picture class="speaker-image">
                     <!-- IE supported by picturefill -->
