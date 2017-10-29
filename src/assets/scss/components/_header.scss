@@ -143,6 +143,10 @@ header {
       right: 30px;
       width: 3px;
 
+      &:hover {
+        opacity: 0.8;
+      }
+
       &:after {
         transform: rotate(90deg);
         background: #ffffff;
@@ -156,6 +160,7 @@ header {
     .menu-links {
       font-size: $text-medium;
       margin-top: 25px;
+      cursor: pointer;
 
       a {
         white-space: nowrap;
