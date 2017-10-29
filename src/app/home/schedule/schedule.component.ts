@@ -1,15 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, AfterViewChecked} from '@angular/core';
+import {DomSanitizer} from '@angular/platform-browser';
+import {Schedule} from './schedule';
 
 @Component({
-  selector: 'app-schedule',
-  templateUrl: './schedule.component.html',
-  styleUrls: ['./schedule.component.scss']
+    selector: 'app-schedule',
+    templateUrl: './schedule.component.html',
 })
-export class ScheduleComponent implements OnInit {
+export class ScheduleComponent implements OnInit, AfterViewChecked {
+    schedule = Schedule;
 
-  constructor() { }
+    constructor(private sanitizer: DomSanitizer) {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
+    ngAfterViewChecked() {
+        (<any>$('.owl-carousel.schedule')).owlCarousel({
+            loop: true,
+            margin: 10,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                1200: {
+                    margin: 20,
+                    items: 3
+                }
+            }
+        });
+    }
 }

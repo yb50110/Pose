@@ -1,3 +1,18 @@
-<p>
-  schedule works!
-</p>
+<div class="schedule-carousel">
+    <div class="owl-carousel schedule">
+
+        <table *ngFor="let day of schedule">
+            <tbody>
+            <tr *ngFor="let time of day.time">
+                <td>{{ time.hour }}</td>
+                <td>
+                    <p *ngFor="let event of time.event">
+                        <span class="italics">{{ event.exactTime }}</span> <span class="bold">{{ event.name }}</span>
+                    </p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>

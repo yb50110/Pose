@@ -1,0 +1,48 @@
+.schedule-carousel {
+  table {
+    tr {
+      vertical-align: top;
+      height: 35px;
+
+      td {
+        p {
+          margin: 0;
+        }
+
+        &:nth-of-type(1) {
+          position: relative;
+          font-weight: $bold;
+          width: 50px;
+
+          &:after {
+            background: #000000;
+            position: absolute;
+            height: 100%;
+            content: "";
+            left: 25px;
+            width: 2px;
+          }
+        }
+
+        &:nth-of-type(2) {
+          position: absolute;
+          left: 50px;
+        }
+      }
+    }
+  }
+
+  .owl-dots {
+    .owl-dot {
+      &:nth-of-type(1).active:before {
+        content: 'Friday'
+      }
+      &:nth-of-type(2).active:before {
+        content: 'Saturday'
+      }
+      &:nth-of-type(3).active:before {
+        content: 'Sunday'
+      }
+    }
+  }
+}
