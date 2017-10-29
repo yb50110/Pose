@@ -1,5 +1,30 @@
 .schedule-carousel {
+  position: relative;
+
+  .right-now {
+    width: calc(100% + 30px);
+    position: absolute;
+    background: $red;
+    right: -15px;
+    height: 1px;
+
+    &:before {
+      position: absolute;
+      background: $red;
+      height: 10px;
+      width: 10px;
+      left: -10px;
+      content: "";
+      top: -5px;
+    }
+  }
+
   table {
+    .schedule-day {
+      margin-bottom: 40px;
+      margin-left: 50px;
+    }
+
     tr {
       vertical-align: top;
       height: 35px;

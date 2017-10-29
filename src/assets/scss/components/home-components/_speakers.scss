@@ -1,7 +1,7 @@
 .speaker {
   background-color: #000000;
   position: relative;
-  overflow-x: hidden;
+  overflow-y: scroll;
   height: 300px;
 
   .speaker-front {
@@ -51,14 +51,22 @@
   }
 }
 
-//.show { opacity: 1 !important; }
-.hide { opacity: 0 !important; z-index: 0; }
+// allow active item to not be covered by the read-more button of the right item
+.owl-item.active {
+  z-index: 10;
+}
 
+//.show { opacity: 1 !important; }
+.hide {
+  opacity: 0 !important;
+  z-index: 0;
+}
 
 // custom overriding styles for owl-carousel
 .owl-stage-outer {
   margin-top: 50px;
 }
+
 .owl-dots {
   counter-reset: dots;
   text-align: left;
@@ -85,16 +93,15 @@
   }
 }
 
-
 .speaker-buttons {
   .read-more {
-    position: absolute;
     background: $red;
+    position: fixed;
     cursor: pointer;
     height: 35px;
-    left: -40px;
+    left: -20px;
     z-index: 10;
-    width: 80px;
+    width: 60px;
     bottom: 0;
 
     .arrow {
@@ -127,8 +134,12 @@
       padding: 10px 15px;
       width: auto;
 
-      .arrow { left: 30px; }
-      .close { left: 48px; }
+      .arrow {
+        left: 30px;
+      }
+      .close {
+        left: 48px;
+      }
 
       p {
         margin: 0 0 0 55px;

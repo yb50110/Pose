@@ -1,7 +1,8 @@
 <div class="schedule-carousel">
+    <div class="right-now"></div>
     <div class="owl-carousel schedule">
-
-        <table *ngFor="let day of schedule">
+        <table *ngFor="let day of schedule" class="schedule-{{ day.day }}">
+            <p class="schedule-day bold desktop-show">{{ day.day }}</p>
             <tbody>
             <tr *ngFor="let time of day.time">
                 <td>{{ time.hour }}</td>

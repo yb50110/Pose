@@ -47,6 +47,15 @@
     .section {
       margin: 50px 0 0 30%;
 
+      &.schedule-container {
+        .schedule-carousel {
+          .right-now {
+            width: calc(100% + 45px);
+            right: -30px;
+          }
+        }
+      }
+
       &.sponsors-container {
         .sponsor-image-container {
           justify-content: space-around;
@@ -94,13 +103,13 @@
         }
 
         .logo-line {
-          left: -84%;
+          width: 176px;
+          left: -58px;
         }
       }
     }
     .header-background {
       .header-borders {
-        position: fixed;
         top: 51px;
         &:after {
           content: none;
@@ -124,14 +133,9 @@
       top: 0;
 
       .top-left {
-        width: 153px;
+        width: 155px;
         &:before {
-          position: absolute;
-          background: $teal;
-          height: 100%;
-          width: 100vw;
-          right: 1px;
-          content: "";
+          display: none;
         }
       }
       .top-right { right: 0; }
@@ -147,7 +151,7 @@
           position: absolute;
           background: $red;
           height: 100%;
-          width: 100vw;
+          width: 10px;
           content: "";
         }
       }
@@ -168,7 +172,6 @@
         margin-left: 10%;
 
         .speaker {
-          overflow: initial;
           width: 100%;
 
           // pseudo: white box
@@ -198,6 +201,27 @@
                 margin-right: -40px;
                 margin-top: -10%;
               }
+            }
+          }
+
+          .speaker-back {
+            margin-bottom: 80px;
+          }
+        }
+      }
+
+      &.schedule-container {
+        margin-left: 10%;
+
+        .schedule-carousel {
+          // hide the time of all the tables except the first table
+          .schedule-Saturday, .schedule-Sunday {
+            .schedule-day { margin-left: 20px }
+            tr td:nth-of-type(1) {
+              display: none;
+            }
+            tr td:nth-of-type(2) {
+              left: 20px;
             }
           }
         }
