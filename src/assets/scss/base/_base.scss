@@ -60,15 +60,15 @@ a {
 }
 
 .desktop-show {
-  display: none;
+  display: none !important;
   @media screen and (min-width: 1200px) {
-    display: block;
+    display: block !important;
   }
 }
 
 .mobile-show {
-  display: block;
+  display: block !important;
   @media screen and (min-width: 1200px) {
-    display: none;
+    display: none !important;
   }
 }

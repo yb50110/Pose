@@ -1,7 +1,7 @@
 <div class="read-more-red-box"></div>
 
 <div class="speaker-carousel">
-    <div class="owl-carousel speakers">
+    <div class="owl-carousel speakers mobile-show">
         <div class="speaker" *ngFor="let speaker of speakers">
             <div class="speaker-buttons">
                 <div class="read-more"  *ngIf="speaker.readMore===false" (click)="openReadMore(speaker)"><div class="arrow"></div></div>
@@ -23,5 +23,29 @@
             </div>
         </div>
     </div>
+
+    <div class="desktop-speakers desktop-show">
+        <div class="speaker" *ngFor="let speaker of speakers">
+            <div class="speaker-buttons">
+                <div class="read-more"  *ngIf="speaker.readMore===false" (click)="openReadMore(speaker)"><div class="arrow"></div></div>
+                <div class="read-more" *ngIf="speaker.readMore===true" (click)="closeReadMore(speaker)"><div class="close"></div></div>
+            </div>
+            <div class="speaker-front" [ngClass]="{ 'hide' : speaker.readMore }">
+                <div class="section-header speaker-name">{{ speaker.fName }}<br>{{ speaker.lName }}</div>
+                <picture class="speaker-image">
+                    <!-- IE supported by picturefill -->
+                    <!--[if IE 9]>
+                    <video style="display: none;"><![endif]-->
+                    <source srcset="../../assets/img/content/speakers/{{ speaker.imageUrl }}" media="(min-width: 1200px)">
+                    <!--[if IE 9]></video><![endif]-->
+                    <img src="../../assets/img/content/speakers/{{ speaker.imageUrl }}" alt="Pose conference logo">
+                </picture>
+            </div>
+            <div class="speaker-back" *ngIf="speaker.readMore===true">
+                <p> <span class="name-yellow">{{ speaker.fName }} {{ speaker.lName }}</span> {{ speaker.bio }}</p>
+            </div>
+        </div>
+    </div>
+
     <div class="clearfix"></div>
 </div>

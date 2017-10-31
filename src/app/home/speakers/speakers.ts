@@ -31,8 +31,8 @@ export const Speakers: speakers[] = [
         lName: 'Berny',
         imageUrl: 'colene-berny-4.png',
         bio: 'is a researcher in the Dept. of Linguistics at UC Berkeley and runs the UC Berkeley ' +
-        'Script Encoding Initiative (and its NEH-sponsored sibling, the Universal Scripts Project). She is the UC ' +
-        'Berkeley representative to the Unicode Consortium, and serves as Liaison for the Linguistic Society of America.',
+        'Script Encoding Initiative. She is the UC Berkeley representative to the Unicode Consortium, and serves ' +
+        'as Liaison for the Linguistic Society of America.',
         readMore: false
     },
     {
@@ -40,18 +40,16 @@ export const Speakers: speakers[] = [
         lName: 'Jeptha',
         imageUrl: 'daniel-jeptha-4.png',
         bio: 'is a Senior Software Architect at Basis Technology with over ten years of software ' +
-        'engineering experience. He designed and implemented the low-level foundations of many of Basis Technology\'s ' +
-        'Language Analysis products and now provides architectural and implementation support for the shared linguistic foundation.',
+        'engineering experience. He provides architectural and implementation support for the shared linguistic foundation.',
         readMore: false
     },
     {
         fName: 'Warren',
         lName: 'Kumar',
         imageUrl: 'warren-kumar-4.png',
-        bio: 'is a senior exploration geologist with 7 years of oil and gas experience in the petroleum ' +
-        'industry. He has extensive exploration experience in Texas, New Mexico, Oklahoma, Kansas, Arkansas, Louisiana ' +
-        'and South America. He attended the United States Naval Academy as an ocean engineer and graduated from the ' +
-        'University of Oklahoma with a B.S. in Geology.',
+        bio: 'is a senior exploration geologist with 7 years of experience. He has extensive exploration experience in ' +
+        'Texas, New Mexico, Oklahoma, Kansas, Arkansas, Louisiana ' +
+        'and South America. He graduated from the University of Oklahoma with a B.S. in Geology.',
         readMore: false
     }
 ];

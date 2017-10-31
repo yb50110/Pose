@@ -20,9 +20,11 @@
     </div>
 
     <div class="menu" id="pose-menu" [ngClass]="{'active': isOpen}">
-        <div class="menu-close" (click)="closeMenu()"></div>
+        <div class="menu-close-container" (click)="closeMenu()">
+            <div class="menu-close"></div>
+        </div>
         <div class="menu-links">
-            <a (click)="scrollTo('what')">What, When, Where</a>
+            <a (click)="scrollTo('what')">What, Where</a>
             <a (click)="scrollTo('speakers')">Speakers</a>
             <a (click)="scrollTo('schedule')">Schedule</a>
             <a (click)="scrollTo('lodging')">Lodging</a>
@@ -30,25 +32,3 @@
         </div>
     </div>
 </header>
-
-
-<!--<script>-->
-    <!--$(document).ready(function() {-->
-        <!--console.log('wut');-->
-        <!--$(window).scroll(function () {-->
-            <!--console.log('wut');-->
-            <!--//if you hard code, then use console-->
-            <!--//.log to determine when you want the-->
-            <!--//nav bar to stick.-->
-            <!--console.log($(window).scrollTop());-->
-            <!--if ($(window).scrollTop() > 10) {-->
-                <!--$('.header-content').addClass('fixed');-->
-                <!--$('.header-background').addClass('fixed');-->
-            <!--}-->
-            <!--if ($(window).scrollTop() < 10) {-->
-                <!--$('.header-content').removeClass('fixed');-->
-                <!--$('.header-background').removeClass('fixed');-->
-            <!--}-->
-        <!--});-->
-    <!--});-->
-<!--</script>-->

@@ -26,6 +26,13 @@
   }
 }
 
+.where-container {
+  iframe {
+    height: 300px;
+    width: 100%;
+  }
+}
+
 .newsletter-container {
   .newsletter-input {
     @include input-style;

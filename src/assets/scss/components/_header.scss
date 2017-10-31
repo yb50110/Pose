@@ -152,26 +152,34 @@ header {
       left: 0;
     }
 
-    .menu-close {
-      transform: rotate(45deg);
-      background: #ffffff;
-      position: absolute;
-      height: 25px;
+    .menu-close-container {
+      cursor: pointer;
+      height: 50px;
       float: right;
-      right: 30px;
-      width: 3px;
-
+      width: 50px;
       &:hover {
-        opacity: 0.8;
+        .menu-close {
+          opacity: 0.8;
+        }
       }
 
-      &:after {
-        transform: rotate(90deg);
+      .menu-close {
+        transform: rotate(45deg);
         background: #ffffff;
         position: absolute;
-        height: 100%;
-        width: 100%;
-        content: "";
+        height: 25px;
+        float: right;
+        right: 30px;
+        width: 3px;
+
+        &:after {
+          transform: rotate(90deg);
+          background: #ffffff;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          content: "";
+        }
       }
     }
 

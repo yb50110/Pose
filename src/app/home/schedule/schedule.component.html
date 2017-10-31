@@ -2,13 +2,13 @@
     <div class="right-now"></div>
     <div class="owl-carousel schedule">
         <table *ngFor="let day of schedule" class="schedule-{{ day.day }}">
-            <p class="schedule-day bold desktop-show">{{ day.day }}</p>
+            <p class="schedule-day bold desktop-show">{{ day.day }}, {{ day.date }}</p>
             <tbody>
             <tr *ngFor="let time of day.time">
                 <td>{{ time.hour }}</td>
                 <td>
                     <p *ngFor="let event of time.event">
-                        <span class="italics">{{ event.exactTime }}</span> <span class="bold">{{ event.name }}</span>
+                        <span class="italics" [ngClass]="{'highlight' : event.priority}">{{ event.exactTime }}</span> <span class="bold">{{ event.name }}</span>
                     </p>
                 </td>
             </tr>

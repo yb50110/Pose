@@ -27,7 +27,6 @@ export class SpeakersComponent implements OnInit, AfterViewChecked {
                     items: 1
                 },
                 1200: {
-                    margin: 20,
                     items: 3
                 }
             }

@@ -110,7 +110,7 @@
     }
     .header-background {
       .header-borders {
-        top: 51px;
+        top: 52px;
         &:after {
           content: none;
         }
@@ -172,7 +172,11 @@
         margin-left: 10%;
 
         .speaker {
-          width: 100%;
+          width: calc((100% / 3) - 15px);
+          margin-bottom: 20px;
+          margin-right: 20px;
+          overflow: initial;
+          float: left;
 
           // pseudo: white box
           &:before {
@@ -186,6 +190,15 @@
 
           &:nth-of-type(3n) {
             margin-right: 0;
+          }
+          &:nth-of-type(n+4) {
+            margin-bottom: 0;
+          }
+
+          .speaker-buttons {
+            .read-more, .arrow {
+              position: absolute;
+            }
           }
 
           .speaker-name {

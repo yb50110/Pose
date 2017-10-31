@@ -1,13 +1,15 @@
 export const Schedule: schedule[] = [
     {
         day: 'Friday',
+        date: 'Oct 26',
         time: [
             {
                 hour: '07',
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -16,7 +18,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '8:30 - 10:30',
-                        name: 'Registration'
+                        name: 'Registration',
+                        priority: false
                     }
                 ]
             },
@@ -25,7 +28,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -34,11 +38,13 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '10:20 to 10:30',
-                        name: 'Welcome'
+                        name: 'Welcome',
+                        priority: false
                     },
                     {
                         exactTime: '10:30 - 11:50',
-                        name: 'Presentation Airi Nakamura'
+                        name: 'Presentation Airi Nakamura',
+                        priority: true
                     }
                 ]
             },
@@ -47,7 +53,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -56,7 +63,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '12:00 to 1:20',
-                        name: 'Lunch'
+                        name: 'Lunch',
+                        priority: false
                     }
                 ]
             },
@@ -65,7 +73,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '1:40 to 3:00',
-                        name: 'Presentation: Allycia London'
+                        name: 'Presentation: Allycia London',
+                        priority: true
                     }
                 ]
             },
@@ -74,7 +83,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -83,7 +93,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '3:30 to 5:00',
-                        name: 'Panel Discussion'
+                        name: 'Panel Discussion',
+                        priority: false
                     }
                 ]
             },
@@ -92,7 +103,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -101,7 +113,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '5:15 to 6:15',
-                        name: 'Cocktail Hour'
+                        name: 'Cocktail Hour',
+                        priority: false
                     }
                 ]
             },
@@ -110,7 +123,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '6:15 to 7:45',
-                        name: 'Networking Dinner'
+                        name: 'Networking Dinner',
+                        priority: false
                     }
                 ]
             },
@@ -119,7 +133,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -128,7 +143,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '8:00 to 10:00',
-                        name: 'Business Exposition'
+                        name: 'Business Exposition',
+                        priority: false
                     }
                 ]
             },
@@ -137,7 +153,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -146,7 +163,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '10:00 to 12:00',
-                        name: 'Karaoke'
+                        name: 'Karaoke',
+                        priority: false
                     }
                 ]
             },
@@ -155,7 +173,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -164,7 +183,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -172,13 +192,15 @@ export const Schedule: schedule[] = [
     },
     {
         day: 'Saturday',
+        date: 'Oct 27',
         time: [
             {
                 hour: '07',
                 event: [
                     {
                         exactTime: '7:00 – 8:50',
-                        name: 'Breakfast'
+                        name: 'Breakfast',
+                        priority: false
                     }
                 ]
             },
@@ -187,7 +209,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '8:00 – 8:50',
-                        name: 'Workshop 1: Chico Shakil'
+                        name: 'Workshop 1: Chico Shakil',
+                        priority: true
                     }
                 ]
             },
@@ -196,7 +219,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '9:00 – 10:20',
-                        name: 'Presentation: Colene Berny'
+                        name: 'Presentation: Colene Berny',
+                        priority: true
                     }
                 ]
             },
@@ -205,7 +229,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -214,7 +239,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '11:00 AM – 12:30',
-                        name: 'Panel Discussion'
+                        name: 'Panel Discussion',
+                        priority: false
                     }
                 ]
             },
@@ -223,7 +249,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '12:30 – 2:20',
-                        name: 'Lunch'
+                        name: 'Lunch',
+                        priority: false
                     }
                 ]
             },
@@ -232,7 +259,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -241,7 +269,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '2:30 – 4:00',
-                        name: 'Workshop: Daniel Jeptha'
+                        name: 'Workshop: Daniel Jeptha',
+                        priority: true
                     }
                 ]
             },
@@ -250,7 +279,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -259,7 +289,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '4:30 – 5:50',
-                        name: 'Keynote Presentation: Warren Kumar'
+                        name: 'Keynote Presentation: Warren Kumar',
+                        priority: true
                     }
                 ]
             },
@@ -268,7 +299,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -277,7 +309,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '6:15 – 8:00',
-                        name: 'Dinner'
+                        name: 'Dinner',
+                        priority: false
                     }
                 ]
             },
@@ -286,7 +319,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -295,7 +329,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '8:30 – 10:00',
-                        name: 'Live Music'
+                        name: 'Live Music',
+                        priority: false
                     }
                 ]
             },
@@ -304,7 +339,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -313,7 +349,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -322,7 +359,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -331,7 +369,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -339,13 +378,15 @@ export const Schedule: schedule[] = [
     },
     {
         day: 'Sunday',
+        date: 'Oct 28',
         time: [
             {
                 hour: '07',
                 event: [
                     {
                         exactTime: '7:00 – 8:50',
-                        name: 'Breakfast'
+                        name: 'Breakfast',
+                        priority: false
                     }
                 ]
             },
@@ -354,7 +395,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -363,7 +405,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '9:00 – 10:30',
-                        name: 'Workshop 2: Chico Shakil'
+                        name: 'Workshop 2: Chico Shakil',
+                        priority: true
                     }
                 ]
             },
@@ -372,7 +415,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '10:45 AM – 12:05',
-                        name: 'Presentation: Daniel Jeptha'
+                        name: 'Presentation: Daniel Jeptha',
+                        priority: true
                     }
                 ]
             },
@@ -381,7 +425,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -390,7 +435,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '12:05 – 12:20',
-                        name: 'Wrap Up'
+                        name: 'Wrap Up',
+                        priority: false
                     }
                 ]
             },
@@ -399,7 +445,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -408,7 +455,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -417,7 +465,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -426,7 +475,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -435,7 +485,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -444,7 +495,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -453,7 +505,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -462,7 +515,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -471,7 +525,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -480,7 +535,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -489,7 +545,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -498,7 +555,8 @@ export const Schedule: schedule[] = [
                 event: [
                     {
                         exactTime: '',
-                        name: ''
+                        name: '',
+                        priority: false
                     }
                 ]
             },
@@ -508,6 +566,7 @@ export const Schedule: schedule[] = [
 
 interface schedule {
     day: string;
+    date: string;
     time: eachEvent[];
 }
 
@@ -519,4 +578,5 @@ interface eachEvent {
 interface eventDescription {
     exactTime: string;
     name: string;
+    priority: boolean;
 }
