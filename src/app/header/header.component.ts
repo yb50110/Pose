@@ -45,6 +45,13 @@ export class HeaderComponent implements OnInit {
         } else {
             this.isSticky = false;
         }
+        if (window.pageYOffset >= 120) {
+            $('.menu-button .year').addClass('hide');
+            $('.menu-button .hamburger').removeClass('hide');
+        } else {
+            $('.menu-button .year').removeClass('hide');
+            $('.menu-button .hamburger').addClass('hide');
+        }
     }
 
     // spin of 18

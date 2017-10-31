@@ -10,7 +10,10 @@
                 <img src="../../assets/img/logos/logo-mobile.svg" alt="Pose conference logo">
             </picture>
         </div>
-        <p class="menu-button" (click)="openMenu()">18</p>
+        <div class="menu-button" (click)="openMenu()">
+            <p class="year">18</p>
+            <p class="hamburger hide">||</p>
+        </div>
     </div>
     <div class="header-background" [ngClass]="{'sticky' : isSticky}" id="pose-header-background">
         <div class="header-borders"></div>
