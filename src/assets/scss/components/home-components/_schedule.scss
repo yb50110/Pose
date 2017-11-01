@@ -63,13 +63,13 @@
   .owl-dots {
     .owl-dot {
       &:nth-of-type(1).active:before {
-        content: 'Friday'
+        content: 'Friday, Oct 26'
       }
       &:nth-of-type(2).active:before {
-        content: 'Saturday'
+        content: 'Saturday, Oct 27'
       }
       &:nth-of-type(3).active:before {
-        content: 'Sunday'
+        content: 'Sunday, Oct 28'
       }
     }
   }
